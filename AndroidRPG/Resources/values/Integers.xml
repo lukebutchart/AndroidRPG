@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <integer name ="StatRollVariance">5</integer>
+  <integer name ="SpecialRollVariance">2</integer>
+  <integer name ="SpecialBase">3</integer>
+  
+  <integer name ="AgilityMultiplier">       3</integer>
+  <integer name ="EnduranceMultiplier">     4</integer>
+  <integer name ="IntelligenceMultiplier">  5</integer>
+  <integer name ="StrengthMultiplier">      6</integer>
+  <integer name ="VitalityMultiplier">      10</integer>
+  <integer name ="PerceptionMultiplier">    15</integer>
+
+  <integer name ="NumberOfStats">6</integer>
+  <integer name ="NumberOfGenders">2</integer>
+</resources>
