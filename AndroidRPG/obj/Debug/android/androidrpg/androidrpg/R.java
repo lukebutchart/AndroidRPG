@@ -11,10 +11,27 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
+        public static final int downarrow=0x7f020000;
+        public static final int enterbutton=0x7f020001;
+        public static final int icon=0x7f020002;
+        public static final int leftarrow=0x7f020003;
+        public static final int menubutton=0x7f020004;
+        public static final int rightarrow=0x7f020005;
+        public static final int uparrow=0x7f020006;
     }
     public static final class id {
+        public static final int DownButton=0x7f06000a;
+        public static final int EnterButton=0x7f060008;
+        public static final int LeftButton=0x7f060009;
+        public static final int MenuButton=0x7f060004;
         public static final int MyButton=0x7f060000;
+        public static final int PlayButton=0x7f060001;
+        public static final int RightButton=0x7f06000b;
+        public static final int UpButton=0x7f060007;
+        public static final int button1=0x7f060002;
+        public static final int space1=0x7f060006;
+        public static final int space2=0x7f060003;
+        public static final int textView1=0x7f060005;
     }
     public static final class integer {
         public static final int AgilityMultiplier=0x7f040003;
@@ -34,15 +51,16 @@ public final class R {
         public static final int playlayout=0x7f030001;
     }
     public static final class string {
-        public static final int AgilityStat=0x7f050002;
-        public static final int ApplicationName=0x7f050001;
-        public static final int EnduranceStat=0x7f050003;
-        public static final int GenderList=0x7f050009;
+        public static final int AgilityStat=0x7f050003;
+        public static final int ApplicationName=0x7f050002;
+        public static final int EnduranceStat=0x7f050004;
+        public static final int GenderList=0x7f05000a;
         public static final int Hello=0x7f050000;
-        public static final int IntelligenceStat=0x7f050004;
-        public static final int PerceptionStat=0x7f050007;
-        public static final int StatsList=0x7f050008;
-        public static final int StrengthStat=0x7f050005;
-        public static final int VitalityStat=0x7f050006;
+        public static final int IntelligenceStat=0x7f050005;
+        public static final int PerceptionStat=0x7f050008;
+        public static final int PlayButton=0x7f050001;
+        public static final int StatsList=0x7f050009;
+        public static final int StrengthStat=0x7f050006;
+        public static final int VitalityStat=0x7f050007;
     }
 }

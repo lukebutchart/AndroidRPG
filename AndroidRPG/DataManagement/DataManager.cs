@@ -54,7 +54,8 @@ namespace AndroidRPG.DataManagement
                             Strength        INTEGER NOT NULL,
                             Intelligence    INTEGER NOT NULL,
                             Endurance       INTEGER NOT NULL,
-                            Agility INTEGER NOT NULL    )");
+                            Agility         INTEGER NOT NULL,
+                            AbilityListString   TEXT NOT NULL       )");
 
             db.ExecSQL(@"
                         CREATE TABLE IF NOT EXISTS Division       (
@@ -73,8 +74,10 @@ namespace AndroidRPG.DataManagement
                             Sword           INTEGER NOT NULL,
                             Axe             INTEGER NOT NULL,
                             Staff           INTEGER NOT NULL,
-                            Bow             INTEGER NOT NULL    )");
-            
+                            Bow             INTEGER NOT NULL,
+
+                            AbilityListString   TEXT NOT NULL       )");
+
             db.ExecSQL(@"CREATE INDEX IF NOT EXISTS NAME_ABILITY ON ABILITY (NAME)");
             db.ExecSQL(@"CREATE INDEX IF NOT EXISTS NAME_CHARACTER ON CHARACTER (NAME)");
             db.ExecSQL(@"CREATE INDEX IF NOT EXISTS NAME_DIVISION ON DIVISION (NAME)");

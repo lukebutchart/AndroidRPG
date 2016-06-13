@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Views;
 using Android.App;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AndroidRPG.Objects
 {
@@ -21,8 +23,12 @@ namespace AndroidRPG.Objects
         public int              Intelligence    { get; set; }
         public int              Endurance       { get; set; }
         public int              Agility         { get; set; }
-        public List<int>        StatRoll        { get; set; }
-        public List<Ability>    AbilityList     { get; set; }
+        public string AbilityListString { get; set; }
+
+        //public List<int>        StatRoll        { get; set; }
+        //public List<Ability>    AbilityList     { get; set; }
+        //public string AbilityListBytesString { get; set; }
+        //public string StatRollString { get; set; }
 
 
         public Character() { }
@@ -31,6 +37,30 @@ namespace AndroidRPG.Objects
         {
             this.Name = name;
             this.Gender = gender;
+
+            this.Health = 0;        //These may need assigning at some point
+            this.Mana = 0;
+            this.Attack = 0;
+            this.Magic = 0;
+            this.Defence = 0;
+            this.Speed = 0;
+            this.Vitality = 0;
+            this.Perception = 0;
+            this.Strength = 0;
+            this.Intelligence = 0;
+            this.Endurance = 0;
+            this.Agility = 0;
+
+            this.AbilityListString = "";
+
+            //this.StatRollString = "";
+
+            //DataManagement.GameMaster gameMaster = new DataManagement.GameMaster();
+
+            //List<Ability> abilityList = new List<Ability>();
+
+            //this.AbilityListBytesString = gameMaster.ObjectToString(abilityList);
+
             //this.StatusEffect = statusEffect;
             //this.CostBase = costBase;
             //this.PowerBase = powerBase;
@@ -38,6 +68,13 @@ namespace AndroidRPG.Objects
             //this.Existence = existence;
             //this.MaxLevel = maxLevel;
         }
+
+        //public object GetAbilityList()
+        //{
+        //    DataManagement.GameMaster gameMaster = new DataManagement.GameMaster();
+
+        //    return gameMaster.StringToObject(AbilityListBytesString);
+        //}
 
         public void GenerateStats(Character character) //, List<int> randomSeed, Data data)
         {
@@ -51,12 +88,14 @@ namespace AndroidRPG.Objects
             character.Mana      = character.Perception   *  int.Parse(Application.Context.GetString(Resource.Integer.PerceptionMultiplier));
             character.Speed     = character.Agility      *  int.Parse(Application.Context.GetString(Resource.Integer.AgilityMultiplier));
 
-            character.Attack    +=  character.StatRoll[statsList.IndexOf("Attack")];
-            character.Defence   +=  character.StatRoll[statsList.IndexOf("Defence")];
-            character.Health    +=  character.StatRoll[statsList.IndexOf("Health")];
-            character.Magic     +=  character.StatRoll[statsList.IndexOf("Magic")];
-            character.Mana      +=  character.StatRoll[statsList.IndexOf("Mana")];
-            character.Speed     +=  character.StatRoll[statsList.IndexOf("Speed")];
+            int statRollVariance = int.Parse(Application.Context.GetString(Resource.Integer.StatRollVariance));
+
+            character.Attack    +=  (DataManagement.GameMaster.RandomNums[statRollVariance * 2] - statRollVariance);
+            character.Defence   +=  (DataManagement.GameMaster.RandomNums[statRollVariance * 2] - statRollVariance);
+            character.Health    +=  (DataManagement.GameMaster.RandomNums[statRollVariance * 2] - statRollVariance);
+            character.Magic     +=  (DataManagement.GameMaster.RandomNums[statRollVariance * 2] - statRollVariance);
+            character.Mana      +=  (DataManagement.GameMaster.RandomNums[statRollVariance * 2] - statRollVariance);
+            character.Speed     +=  (DataManagement.GameMaster.RandomNums[statRollVariance * 2] - statRollVariance);
 
             //character.Attack = character.Strength * int.Parse(data.GetData(data.Special, "Strength")) + character.StatRoll[data.Stats.ColumnNames.IndexOf("Attack")];
             //character.Defence = character.Endurance * int.Parse(data.GetData(data.Special, "Endurance")) + character.StatRoll[data.Stats.ColumnNames.IndexOf("Defence")];
@@ -152,30 +191,30 @@ namespace AndroidRPG.Objects
             //rand.RefreshRandomSeed(randomSeed, 1);
         }
 
-        public void GenerateStatRoll(Character character) //, List<int> randomSeed, Data data)
-        {
-            int statRollVariance = int.Parse(Application.Context.GetString(Resource.Integer.StatRollVariance)); //int.Parse(data.GetData(data.GenerationNumbers, "StatRollVariance"));
+        //public void GenerateStatRoll(Character character) //, List<int> randomSeed, Data data)
+        //{
+        //    int statRollVariance = int.Parse(Application.Context.GetString(Resource.Integer.StatRollVariance)); //int.Parse(data.GetData(data.GenerationNumbers, "StatRollVariance"));
                         
-            if (character.StatRoll == null)
-            {
-                character.StatRoll = new List<int>();
-            }
+        //    if (character.StatRoll == null)
+        //    {
+        //        character.StatRoll = new List<int>();
+        //    }
 
-            string statsListString = Application.Context.GetString(Resource.String.StatsList);
+        //    string statsListString = Application.Context.GetString(Resource.String.StatsList);
 
-            List<string> statsList = statsListString.Split(',').ToList<string>();
+        //    List<string> statsList = statsListString.Split(',').ToList<string>();
 
-            for (int i = 0; i < statsList.Count(); i++)
-            {
-                if (character.StatRoll.Count <= i)
-                {
-                    character.StatRoll.Add(0);
-                }
+        //    for (int i = 0; i < statsList.Count(); i++)
+        //    {
+        //        if (character.StatRoll.Count <= i)
+        //        {
+        //            character.StatRoll.Add(0);
+        //        }
 
-                character.StatRoll[i] = DataManagement.GameMaster.RandomNums[statRollVariance * 2] - statRollVariance; //rand.GetRandomInt(randomSeed, statRollVariance * 2) - statRollVariance;
-                //rand.RefreshRandomSeed(randomSeed, 1);
-            }
-        }
+        //        character.StatRoll[i] = DataManagement.GameMaster.RandomNums[statRollVariance * 2] - statRollVariance; //rand.GetRandomInt(randomSeed, statRollVariance * 2) - statRollVariance;
+        //        //rand.RefreshRandomSeed(randomSeed, 1);
+        //    }
+        //}
 
         public void GenerateClass(Character person, string className)
         {

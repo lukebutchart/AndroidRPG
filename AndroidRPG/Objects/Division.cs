@@ -15,8 +15,11 @@ namespace AndroidRPG.Objects
         public int Sword { get; set; }
         public int Axe { get; set; }
         public int Staff { get; set; }
-        public int Bow { get; set; }        
-        public List<Ability> AbilList { get; set; }
+        public int Bow { get; set; }
+
+        public string AbilityListString { get; set; }
+
+        //public List<Ability> AbilList { get; set; }
 
 
         public Division(){}
@@ -36,6 +39,7 @@ namespace AndroidRPG.Objects
             this.Staff = staff;
             this.Bow = bow;
             this.Existence = existence;
+            this.AbilityListString = "";
         }
 
         //public Division GetNewClass(string className, Data data)

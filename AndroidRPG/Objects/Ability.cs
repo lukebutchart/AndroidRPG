@@ -16,16 +16,20 @@ namespace AndroidRPG.Objects
 
         public Ability(){}
 
-        public Ability(string name, string damageEffect, string statusEffect, int costBase, int costIncrease, int powerBase, int powerIncrease, bool existence = true, int maxLevel = 5)
+        public Ability(string name, string damageEffect, string statusEffect, int costBase, int costIncrease, int powerBase, int powerIncrease, int level = 1, bool existence = true, int maxLevel = 5)
         {
             this.Name = name;
             this.DamageEffect = damageEffect;
             this.StatusEffect = statusEffect;
             this.CostBase = costBase;
+            this.CostIncrease = costIncrease;
             this.PowerBase = powerBase;
             this.PowerIncrease = powerIncrease;
             this.Existence = existence;
             this.MaxLevel = maxLevel;
+
+            this.Level = level;
+            this.RefName = name + this.Level;
         }
 
 

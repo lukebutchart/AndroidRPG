@@ -1,5 +1,10 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.Compression;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AndroidRPG.DataManagement
 {
@@ -85,14 +90,32 @@ namespace AndroidRPG.DataManagement
         /// <summary>
         /// The list of all collectables sorted alphabetically.
         /// </summary>
-        //public static List<Collectable> Collectables
-        //{
-        //    get
-        //    {
-        //        collectables.Sort(delegate (Collectable c1, Collectable c2) { return c1.Name.CompareTo(c2.Name); });
-        //        return collectables;
-        //    }
-        //}
+        public static List<Objects.Ability> Abilitys
+        {
+            get
+            {
+                abilities.Sort(delegate (Objects.Ability c1, Objects.Ability c2) { return c1.Name.CompareTo(c2.Name); });
+                return abilities;
+            }
+        }
+
+        public static List<Objects.Character> Characters
+        {
+            get
+            {
+                characters.Sort(delegate (Objects.Character c1, Objects.Character c2) { return c1.Name.CompareTo(c2.Name); });
+                return characters;
+            }
+        }
+
+        public static List<Objects.Division> Divisions
+        {
+            get
+            {
+                divisions.Sort(delegate (Objects.Division c1, Objects.Division c2) { return c1.Name.CompareTo(c2.Name); });
+                return divisions;
+            }
+        }
 
         //public static List<Friend> Friends
         //{
@@ -196,5 +219,73 @@ namespace AndroidRPG.DataManagement
 
             return name;
         }
+
+
+        
+
+        //string ObjectToByteString(object obj)
+        //{
+        //    if (obj == null)
+        //        return null;
+        //    BinaryFormatter bf = new BinaryFormatter();
+        //    using (MemoryStream ms = new MemoryStream())
+        //    {
+        //        bf.Serialize(ms, obj);
+        //        return ms.ToArray().ToString();
+        //    }
+        //}
+
+        //object ObjectFromByteString(string theString)
+        //{
+        //    if (theString == null)
+        //        return null;
+        //    BinaryFormatter bf = new BinaryFormatter();
+        //    using (MemoryStream ms = new MemoryStream())
+        //    {
+        //        bf.Deserialize(ms);
+        //        return ms.ToArray().ToString();
+        //    }
+        //}
+
+        //string Thing(byte[] content)
+        //{
+        //    try
+        //    {
+        //        var formatter = new BinaryFormatter();
+        //        //byte[] content;
+        //        using (var ms = new MemoryStream())
+        //        {
+        //            using (var ds = new DeflateStream(ms, CompressionMode.Compress, true))
+        //            {
+        //                formatter.Serialize(ds, set);
+        //            }
+        //            ms.Position = 0;
+        //            content = ms.GetBuffer();
+        //            contentAsString = BytesToString(content);
+        //            content.ToString()
+        //        }
+        //    }
+        //    catch (Exception ex) { /* handle exception omitted */ }
+        //}
+        
+        //public string ObjectToString(object obj)
+        //{
+        //    using (MemoryStream ms = new MemoryStream())
+        //    {
+        //        new BinaryFormatter().Serialize(ms, obj);
+        //        return Convert.ToBase64String(ms.ToArray());
+        //    }
+        //}
+
+        //public object StringToObject(string base64String)
+        //{
+        //    byte[] bytes = Convert.FromBase64String(base64String);
+        //    using (MemoryStream ms = new MemoryStream(bytes, 0, bytes.Length))
+        //    {
+        //        ms.Write(bytes, 0, bytes.Length);
+        //        ms.Position = 0;
+        //        return new BinaryFormatter().Deserialize(ms);
+        //    }
+        //}
     }
 }

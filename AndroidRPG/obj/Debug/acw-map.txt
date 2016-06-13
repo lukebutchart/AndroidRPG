@@ -2,11 +2,11 @@ AndroidRPG.MainActivity, AndroidRPG;md594741b18e2eca5df7ed8d4949b71c6d3.MainActi
 AndroidRPG.MainActivity, AndroidRPG, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md594741b18e2eca5df7ed8d4949b71c6d3.MainActivity
 AndroidRPG.MainActivity;md594741b18e2eca5df7ed8d4949b71c6d3.MainActivity
 androidrpg.MainActivity;md594741b18e2eca5df7ed8d4949b71c6d3.MainActivity
-AndroidRPG.PlayActivity, AndroidRPG;md594741b18e2eca5df7ed8d4949b71c6d3.PlayActivity
-AndroidRPG.PlayActivity, AndroidRPG, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md594741b18e2eca5df7ed8d4949b71c6d3.PlayActivity
-AndroidRPG.PlayActivity;md594741b18e2eca5df7ed8d4949b71c6d3.PlayActivity
-androidrpg.PlayActivity;md594741b18e2eca5df7ed8d4949b71c6d3.PlayActivity
 AndroidRPG.DataManagement.DataManager, AndroidRPG;md56b7f04be69d91b1729b5aac06928851c.DataManager
 AndroidRPG.DataManagement.DataManager, AndroidRPG, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56b7f04be69d91b1729b5aac06928851c.DataManager
 AndroidRPG.DataManagement.DataManager;md56b7f04be69d91b1729b5aac06928851c.DataManager
 androidrpg.datamanagement.DataManager;md56b7f04be69d91b1729b5aac06928851c.DataManager
+AndroidRPG.Activities.PlayActivity, AndroidRPG;md524ae74c7401b9731e86c972bc4b20694.PlayActivity
+AndroidRPG.Activities.PlayActivity, AndroidRPG, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md524ae74c7401b9731e86c972bc4b20694.PlayActivity
+AndroidRPG.Activities.PlayActivity;md524ae74c7401b9731e86c972bc4b20694.PlayActivity
+androidrpg.activities.PlayActivity;md524ae74c7401b9731e86c972bc4b20694.PlayActivity

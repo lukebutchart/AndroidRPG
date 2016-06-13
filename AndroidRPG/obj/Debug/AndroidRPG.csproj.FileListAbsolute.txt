@@ -1,4 +1,3 @@
-C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\AndroidRPG.csprojResolveAssemblyReference.cache
 C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\bin\Debug\AndroidRPG.dll
 C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\bin\Debug\AndroidRPG.pdb
 C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\bin\Debug\AndroidRPG.AndroidRPG.apk
@@ -16,5 +15,12 @@ C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\res
 C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\res\values\integers.xml
 C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\R.cs.flag
 C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\uploadflags.txt
+C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\res\drawable\downarrow.png
+C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\res\drawable\leftarrow.png
+C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\res\drawable\rightarrow.png
+C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\res\drawable\uparrow.png
+C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\AndroidRPG.csprojResolveAssemblyReference.cache
+C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\res\drawable\menubutton.png
+C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\res\drawable\enterbutton.png
 C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\obj\Debug\AndroidRPG.dll.mdb
 C:\Users\luke.butchart\Documents\_AndroidRPG\AndroidRPG\AndroidRPG\bin\Debug\AndroidRPG.dll.mdb
